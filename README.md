@@ -1,4 +1,4 @@
-# Noé Animal Rescue Organization
+# [Noé Animal Rescue Organization](https://wfanni.github.io/dog-shelter-landing-page.github.io/)
 
 This 5-day project was our very first group assignment in our frontend journey.
 At that time we were only familiar with HTML and CSS and the task was to create a landing page for an NGO. We picked a Hungarian Animal Rescue Organization based in Budapest.
