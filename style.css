@@ -1,0 +1,502 @@
+body {
+  position: relative;
+  margin: 0;
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.first {
+  display: flex;
+  width: 100%;
+}
+
+.first_all {
+  position: relative;
+}
+
+#logo {
+  width: 30%;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  padding: 20px;
+  z-index: 10;
+  height: 120px;
+  background: url("../logo/new_color_logo_3.svg") no-repeat;
+  transition: background-image 0.5s;
+  animation-name: logoFade;
+  animation-duration: 1s;
+  animation-iteration-count: initial;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes logoFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#logo:hover {
+  background: url("../logo/new_color_logo_5.svg") no-repeat;
+}
+
+#background1 {
+  width: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 75% 100%, 50% 90%, 25% 100%, 0 80%);
+}
+
+.first_text {
+  font-size: 1vw;
+  position: absolute;
+  top: 175px;
+  right: 100px;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-iteration-count: initial;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  10% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+.first_text h1 {
+  font-size: 3.2em;
+  font-family: Kalam, sans-serif;
+  text-align: center;
+  line-height: 70px;
+  color: #febd57;
+  text-shadow: 5px 5px 20px #353535;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 2s;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+.spot {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.svg-wrapper {
+  margin-top: 0;
+  width: 350px;
+  height: 80px;
+  display: inline-block;
+  border-radius: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#shape {
+  stroke-width: 10px;
+  fill: transparent;
+  stroke: #009ffd;
+  stroke-dasharray: 170 550;
+  stroke-dashoffset: -525;
+  transition: 1s all ease;
+  cursor: pointer;
+}
+
+#text {
+  margin-top: -65px;
+  text-align: center;
+}
+
+#text a {
+  color: #febd57;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 2em;
+  font-family: Montserrat, sans-serif;
+}
+
+.svg-wrapper:hover #shape {
+  stroke-dasharray: 50 0;
+  stroke-width: 10px;
+  stroke-dashoffset: 0;
+  stroke: #febd57;
+}
+
+.first_buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.kutyak {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  margin-left: -50px;
+  height: 500px;
+  position: relative;
+  background-color: #ffffff;
+  background: url("../img/patternpad.svg") no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.dog {
+  position: relative;
+  display: block;
+  width: 200px;
+  height: 200px;
+  font-family: Mali, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.dog img,
+.dog div {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.dog img {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 3px 3px 10px #555555;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.6);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+  cursor: pointer;
+  border: 5px solid #555555;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+.overlay_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  font-weight: 800;
+  color: #353535;
+  font-family: "Lobster Two", sans-serif;
+}
+
+.item1,
+.item3,
+.item5 {
+  align-self: flex-start;
+}
+
+.item2,
+.item4 {
+  align-self: flex-end;
+}
+
+#background2 {
+  width: 100%;
+  clip-path: polygon(
+    50% 3%,
+    75% 10%,
+    100% 0,
+    100% 80%,
+    50% 100%,
+    50% 100%,
+    0 80%,
+    0 0,
+    25% 10%
+  );
+}
+
+.info {
+  position: relative;
+}
+
+.info-class {
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  width: 35%;
+}
+
+#Para {
+  font-size: 1.7em;
+  color: white;
+  text-align: left;
+  font-family: Montserrat, sans-serif;
+  line-height: 50px;
+}
+
+.second_btn {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.svg-wrapper2 {
+  margin-top: 0;
+  width: 500px;
+  height: 80px;
+  display: inline-block;
+  border-radius: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#shape2 {
+  stroke-width: 10px;
+  fill: transparent;
+  stroke: #009ffd;
+  stroke-dasharray: 300 700;
+  stroke-dashoffset: -680;
+  transition: 1s all ease;
+  cursor: pointer;
+}
+
+#text2 {
+  margin-top: -65px;
+  text-align: center;
+}
+
+#text2 a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 2em;
+  font-family: Montserrat, sans-serif;
+}
+
+.svg-wrapper2:hover #shape2 {
+  stroke-dasharray: 50 0;
+  stroke-width: 10px;
+  stroke-dashoffset: 0;
+  stroke: #fff;
+}
+
+.email-sub {
+  margin-top: 100px;
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.email-sub img {
+  position: absolute;
+  z-index: -10;
+  width: 100%;
+  height: auto;
+  transform: translateY(-50%);
+  opacity: 0.6;
+}
+
+.email-div {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 2.5em;
+  text-align: center;
+  font-family: Kalam, sans-serif;
+  color: #00629b;
+  text-shadow: 5px 5px 20px #555555;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+form input[type="text"] {
+  height: 50px;
+  width: 300px;
+  margin: 20px;
+  border: 5px solid #009ffd;
+  font-size: 2em;
+  padding: 10px;
+  padding-left: 20px;
+  font-family: Montserrat, sans-serif;
+  box-shadow: 5px 5px 20px #555555;
+}
+
+form input[type="submit"] {
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 2em;
+  width: 340px;
+  margin: 20px;
+  padding: 10px;
+  font-family: Montserrat, sans-serif;
+}
+
+form input::placeholder {
+  opacity: 0.5;
+}
+
+form input:focus {
+  outline: none;
+}
+
+.footer {
+  position: relative;
+}
+
+.footer img {
+  position: absolute;
+  width: 100%;
+  height: 1000px;
+  bottom: 0;
+  z-index: -10;
+  opacity: 0.5;
+}
+
+.third_btn {
+  position: absolute;
+  top: 136.5px;
+  right: 232.5px;
+}
+
+.svg-wrapper3 {
+  margin-top: 15px;
+  width: 340px;
+  height: 80px;
+  display: inline-block;
+  border-radius: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.svg-wrapper3 svg {
+  margin-left: 20px;
+}
+
+#shape3 {
+  stroke-width: 10px;
+  fill: transparent;
+  stroke: #febd57;
+  stroke-dasharray: 180 700;
+  stroke-dashoffset: -500;
+  transition: 1s all ease;
+  cursor: pointer;
+}
+
+#text3 {
+  margin-top: -63px;
+  margin-left: 30px;
+  text-align: center;
+}
+
+#text3 a {
+  color: #353535;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 2em;
+  font-family: Montserrat, sans-serif;
+}
+
+.svg-wrapper3:hover #shape3 {
+  stroke-dasharray: 50 0;
+  stroke-width: 10px;
+  stroke-dashoffset: 0;
+  stroke: #009ffd;
+}
+
+footer {
+  background-color: #353535;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Montserrat, sans-serif;
+  color: #fff;
+  font-size: 1.2em;
+}
+
+#year {
+  justify-self: flex-start;
+  margin: 30px;
+}
+
+#org {
+  justify-self: flex-end;
+  margin-right: 30px;
+}
+
+#icons {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  bottom: 50px;
+  gap: 200px;
+}
+
+#icons a {
+  color: #febd57;
+  transition: color 0.5s, transform 0.5s;
+}
+
+#icons a:hover {
+  color: #009ffd;
+  transform: scale(1.2);
+}
+
+#pattern {
+  width: 1700px;
+  height: 800px;
+  object-fit: cover;
+  object-position: 0 -10%;
+}
